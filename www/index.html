@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minhas Pizzas Preferidas</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <style>
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+    </style>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body>
+    
+    <!-- Tela de Inicio -->
+    
+    <div data-role="page" id="inicio">
+        <div data-role="header" data-theme="a">
+            <h1 class="titulo">Inicio</h1>
+        </div>
+        <div data-role="content">
+            <div class="box">
+                <a href="#ListaPedidos" data-role="button" class="btn-pad" data-transition="slideup">Listar</a>
+            </div>
+            
+            <div class="box">
+                <a href="#Cardapio" data-role="button" class="btn-pad" data-transition="slideup">Cardapio</a>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Tela de Cardapio -->
+    
+    <div data-role="page" id="Cardapio">
+        <div data-role="header" data-theme="a">
+            <a href="#inicio" data-role="button" class="ui-btn-left homeBtn" data-theme="c" data-icon="carat-l" data-transition="slidedown">Voltar</a>
+            <h1 class="titulo">Cardapio</h1>
+        </div>
+        <div data-role="content">
+            <div id="listapizzas"></div>
+        </div>
+    </div>
+    
+    <!-- Tela de Listagem -->
+    
+   <div data-role="page" id="ListaPedidos">
+        <div data-role="header" data-theme="a">
+             <a href="#inicio" data-role="button" class="ui-btn-left homeBtn" data-theme="c" data-icon="carat-l" data-transition="slidedown">Voltar</a>
+            <a href="#IncluirPizzas" data-role="button" class="ui-btn-right homeBtn" data-theme="c" data-icon="plus" data-transition="slideup">Incluir</a>
+            <h1>Pedidos</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" data-theme="c" id="pizzas">
+                <p id="semErros" style="display:none;">Nenhum pedido no momento!</p>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Tela de Cadastro -->
+    
+    <div data-role="page" id="IncluirPizzas">
+        <div data-role="header" data-theme="a">
+            <a href="#inicio" data-role="button" class="ui-btn-left homeBtn" data-theme="c" data-icon="carat-l" data-transition="slidedown">Voltar</a>
+            <h1>Incluir Pedido</h1>
+        </div>
+        <div data-role="content">
+            <div class="Form-Pizzas">
+                <form id="form-pizzas">
+                    <input id="Nome" />
+                    <input id="Nome" />
+                    <input type="button" value="Incluir" id="IncluirPizzas" data-icon="plus" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/init-app.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <script src="js/bd.js"></script>
+</body>
+
+
+</html>
